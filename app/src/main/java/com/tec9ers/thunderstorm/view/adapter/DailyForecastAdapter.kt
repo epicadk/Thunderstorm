@@ -57,7 +57,7 @@ class DailyForecastAdapter @Inject constructor(
                         null, null,
                         ContextCompat.getDrawable(context, R.drawable.ic_arrow_upward_24px), null
                     )
-                    desc_tv.text = daily.weather[0].description
+                    desc_tv.text = format.capitalizeDescription(daily.weather[0].description)
                     day_tv.text = format.formatDay(daily.dt)
                 }
             )

@@ -1,44 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
+    android:layout_width="72dp"
+    android:layout_height="149dp"
     android:background="@drawable/hourly_forecast"
-    android:padding="10dp"
-    android:gravity="center">
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_forecast_hourly_temp"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        tools:text="29"
-        android:textColor="@color/standard_text"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:fontFamily="@font/montserrat"
+        android:textAlignment="center"
+        android:textColor="@color/hourly_forecast_rv_item_content"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:fontFamily="@font/montserrat" />
+        tools:text="29°C" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/tv_forecast_hourly_thumbnail"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/ic_wb_sunny_rv_item" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_forecast_hourly_desc"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
         android:ellipsize="end"
-        tools:text="Cloudy"
-        android:textColor="@color/standard_text"
-        android:textSize="16sp"
-        android:fontFamily="@font/montserrat" />
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat"
+        android:maxLines="2"
+        android:scrollHorizontally="false"
+        android:textAlignment="center"
+        android:textColor="@color/hourly_forecast_rv_item_content"
+        android:textSize="12sp"
+        tools:text="Broken Clouds"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_forecast_hourly_time"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        tools:text="10:00"
-        android:textColor="@color/standard_text"
-        android:textSize="18sp"
-        android:fontFamily="@font/montserrat" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:scrollHorizontally="false"
+        android:textAlignment="center"
+        android:textColor="@color/hourly_forecast_rv_item_content"
+        android:textSize="14sp"
+        tools:text="10:00\nAM" />
 
 </LinearLayout>

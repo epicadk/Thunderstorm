@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Thunderstorm</string>
     <string name="feels_like">Feels Like</string>
-    <string name="temp">%.2f˚C</string>
+    <string name="temp">%d˚C</string>
     <string name="wind_speed">%.2f km/h</string>
     <string name="pressure">Pressure\n%.2f bar</string>
     <string name="uv_index">UV Index\n%.2f</string>

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
     <com.google.android.material.card.MaterialCardView
@@ -25,8 +24,8 @@
                 android:background="@color/location_tv_background"
                 android:fontFamily="@font/montserrat"
                 android:text="My Location"
-                android:textColor="@color/inverted_text"
                 android:textAlignment="center"
+                android:textColor="@color/inverted_text"
                 android:textSize="25sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -48,12 +47,12 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat"
                     android:gravity="center"
-                    tools:text="7:52"
                     android:textColor="@color/standard_text"
                     app:layout_constraintBottom_toTopOf="@id/tv_wind_speed"
                     app:layout_constraintEnd_toStartOf="@id/tv_sun_set"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="7:52" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tv_sun_set"
@@ -61,12 +60,12 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat"
                     android:gravity="center"
-                    tools:text="6:35"
                     android:textColor="@color/standard_text"
                     app:layout_constraintBottom_toTopOf="@+id/tv_wind_speed"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tv_sun_rise"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="6:35" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tv_wind_speed"
@@ -75,12 +74,12 @@
                     android:background="@color/wind_speed_tv_background"
                     android:fontFamily="@font/montserrat"
                     android:gravity="center"
-                    tools:text="20 km/h"
                     android:textColor="@color/inverted_text"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_sun_rise" />
+                    app:layout_constraintTop_toBottomOf="@id/tv_sun_rise"
+                    tools:text="20 km/h" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -101,13 +100,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat"
-                    tools:text="27"
                     android:textColor="@color/inverted_text"
                     android:textSize="35sp"
                     app:layout_constraintBottom_toTopOf="@id/tv_feels_like_txt"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="27" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tv_feels_like_txt"
@@ -127,26 +126,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat"
-                    tools:text="29"
                     android:textColor="@color/inverted_text"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toTopOf="@id/tv_weather_condition"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_feels_like_txt" />
+                    app:layout_constraintTop_toBottomOf="@id/tv_feels_like_txt"
+                    tools:text="29" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tv_weather_condition"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat"
-                    tools:text="Broken Clouds"
                     android:textColor="@color/inverted_text"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_feels_like_temp" />
+                    app:layout_constraintTop_toBottomOf="@id/tv_feels_like_temp"
+                    tools:text="Broken Clouds" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -155,9 +154,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:orientation="vertical"
                 android:background="@drawable/rounded_rectangle"
                 android:elevation="2dp"
+                android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/temperature_info_layout">
@@ -166,8 +165,8 @@
                     android:id="@+id/hourly_forecast_title_tv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="10dp"
                     android:fontFamily="@font/montserrat"
+                    android:paddingHorizontal="10dp"
                     android:text="@string/hourly_forecast_title"
                     android:textColor="@color/standard_text"
                     android:textSize="20sp"
@@ -176,7 +175,9 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/hourly_forecast_rv"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/hourly_forecast"
+                    android:padding="3dp"/>
 
             </LinearLayout>
 

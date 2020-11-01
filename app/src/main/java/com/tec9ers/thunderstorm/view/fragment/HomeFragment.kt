@@ -89,7 +89,7 @@ class HomeFragment : Fragment() {
                 tv_feels_like_temp.text = formatTemp(current.feelsLike)
                 tv_temp_main.text = formatTemp(current.temp)
                 tv_wind_speed.text = formatWindSpeed(current.windSpeed, current.windDeg)
-                tv_weather_condition.text = current.weather[0].description
+                tv_weather_condition.text = capitalizeDescription(current.weather[0].description)
                 tv_sun_rise.text = formatTime(current.sunrise)
                 tv_sun_set.text = formatTime(current.sunset)
                 tv_uv_index.text = formatUVI(current.uvi)

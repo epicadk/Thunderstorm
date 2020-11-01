@@ -38,4 +38,5 @@
     <color name="side_nav_background">@color/honeydew</color>
     <color name="menu_item_selected_background">#AABAAE</color>
     <color name="side_nav_menu_icon">@color/eerie_black</color>
+    <color name="hourly_forecast_rv_item_content">@color/space_cadet</color>
 </resources>

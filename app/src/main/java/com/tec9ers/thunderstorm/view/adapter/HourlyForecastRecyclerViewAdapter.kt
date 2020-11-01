@@ -38,7 +38,7 @@ class HourlyForecastRecyclerViewAdapter @Inject constructor(@ActivityContext val
     class ForecastViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun setData(hourly: Hourly, format: FormatUtils) {
             with(itemView) {
-                tv_forecast_hourly_desc.text = hourly.weather[0].description
+                tv_forecast_hourly_desc.text = format.capitalizeDescription(hourly.weather[0].description)
                 tv_forecast_hourly_temp.text = format.formatTemp(hourly.temp)
                 tv_forecast_hourly_time.text = format.formatTime(hourly.dt)
             }

@@ -9,13 +9,14 @@ import java.time.ZoneId
 import java.time.ZoneOffset
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
+import java.util.*
 import javax.inject.Inject
 
 @ActivityScoped
 class FormatUtils @Inject constructor(@ApplicationContext val context: Context) {
 
     fun formatTemp(temp: Double): String {
-        return context.getString(R.string.temp, temp)
+        return context.getString(R.string.temp, temp.toInt())
     }
 
     fun formatWindSpeed(windSpeed: Double, direction: Int): String {
@@ -39,8 +40,8 @@ class FormatUtils @Inject constructor(@ApplicationContext val context: Context) 
         val zonedDateTime = ZonedDateTime.of(utcDateTime, ZoneOffset.UTC).withZoneSameInstant(
             ZoneId.systemDefault()
         )
-        val format = DateTimeFormatter.ofPattern("hh:mm")
-        return format.format(zonedDateTime)
+        val format = DateTimeFormatter.ofPattern("hh:mm\na")
+        return format.format(zonedDateTime).toUpperCase(Locale.ROOT)
     }
 
     fun formatDay(time: Long): String {
@@ -68,5 +69,15 @@ class FormatUtils @Inject constructor(@ApplicationContext val context: Context) 
 
     fun formatUVI(UVI: Double): String {
         return context.getString(R.string.uv_index, UVI)
+    }
+
+    fun capitalizeDescription(desc: String): String{
+        val words = desc.split(" ")
+        var capitalized = ""
+        words.forEach{
+            capitalized += it.capitalize(Locale.ROOT) + " "
+        }
+
+        return capitalized
     }
 }
